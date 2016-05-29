@@ -70,6 +70,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemanticNetwork\Test.cs" />
     <Compile Include="SemanticNetwork\KnowledgeBase\DataBase.cs" />
     <Compile Include="SemanticNetwork\KnowledgeBase\Expressions\Axiom.cs" />
     <Compile Include="SemanticNetwork\KnowledgeBase\Expressions\ExpressionTree.cs" />
