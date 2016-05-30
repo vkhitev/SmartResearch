@@ -1,0 +1,22 @@
+﻿.breadcrumb
+{
+    background-color: white !important;
+	display: block;
+}
+
+.breadcrumb > span > li
+{
+    display: inline-block;
+}
+
+.breadcrumb > span > li > a:active
+{
+    color: #999999;
+}
+
+.pager {
+	position: absolute;
+	bottom: 60px;
+	width: 830px;
+	height: 60px;
+}
