@@ -86,7 +86,7 @@ namespace SmartResearch.SemanticNetwork.Network
             }
         }
 
-        public Bitmap SaveToPng(string path)
+        public void SaveToPng(string path)
         {
             Dictionary<Node, PointF> nodes = new Dictionary<Node, PointF>(); ///< словник з координатами вершин
             Dictionary<Edge, PointF> edges = new Dictionary<Edge, PointF>(); ///< словник з координатами середин ребер
@@ -110,7 +110,8 @@ namespace SmartResearch.SemanticNetwork.Network
                         nodes[n] = p;
                         angle += d_angle;
                     }
-                    ///Малюваня ребер
+
+                    //Малюваня ребер
                     foreach (Edge edge in Actions)
                     {
                         PointF m = new PointF(); // середина ребра
@@ -139,12 +140,12 @@ namespace SmartResearch.SemanticNetwork.Network
                             float x, y;
                             if (Math.Abs(k) < 1)
                             {
-                                y = m.Y-i * Math.Abs(k) * 25;
+                                y = m.Y - i * Math.Abs(k) * 25;
                                 x = (y - c) / k;
                             }
                             else
                             {
-                                x = m.X + i * (25/Math.Abs(k));
+                                x = m.X + i * (25 / Math.Abs(k));
                                 y = x * k + c;
                             }
                             m = new PointF(x, y);
@@ -155,20 +156,22 @@ namespace SmartResearch.SemanticNetwork.Network
                         edges[edge] = m;
                         #endregion
 
-                        // відкидання 1/15 відрізку від кінця
-                        l.X = (nodes[edge.Object].X + 15*target_point.X) / 16;
-                        l.Y = (nodes[edge.Object].Y + 15*target_point.Y) / 16;
-                        g.DrawLines(new Pen(color, 1) { CustomEndCap = bigArrow}, new PointF[3] { nodes[edge.Object], m, l });
-                        g.DrawString(String.Format("{0} {1}",edge.Name,edge.Value), new Font("TimesNewRoman", 12), Brushes.Red, m, stringFormat);
+                        #region відкидання 1/15 відрізку від кінця
+                        l.X = (nodes[edge.Object].X + 15 * target_point.X) / 16;
+                        l.Y = (nodes[edge.Object].Y + 15 * target_point.Y) / 16;
+                        g.DrawLines(new Pen(color, 1) { CustomEndCap = bigArrow }, new PointF[3] { nodes[edge.Object], m, l });
+                        g.DrawString(String.Format("{0} {1}", edge.Name, edge.Value), new Font("TimesNewRoman", 12), Brushes.Red, m, stringFormat);
 
                         if (edge.Target != null && edge.ChainEdge != null) // (у випадку події-умови з ціллю)
                         {
                             target_point = edges[edge.ChainEdge];
                             l.X = (m.X + 18 * target_point.X) / 19;
                             l.Y = (m.Y + 18 * target_point.Y) / 19;
-                            g.DrawLine(new Pen(Color.Gold, 1) { CustomEndCap = bigArrow}, m, l);
+                            g.DrawLine(new Pen(Color.Gold, 1) { CustomEndCap = bigArrow }, m, l);
                         }
+                        #endregion
                     }
+
                     // малювання вершин
                     foreach (Node obj in Objects)
                     {
@@ -176,16 +179,7 @@ namespace SmartResearch.SemanticNetwork.Network
                         //g.DrawRectangle(Pens.Gold, nodes[obj].X - 50, nodes[obj].Y - 10, 100, 20);
                     }
                 }
-                //b.Save(path, ImageFormat.Png);
-                return b;
-                //try
-                //{
-                //    b.Save(path, ImageFormat.Png);
-                //}
-                //catch (Exception e)
-                //{
-                //    Console.WriteLine(e.Message);
-                //}
+                b.Save(path, ImageFormat.Png);
             }
         }
 

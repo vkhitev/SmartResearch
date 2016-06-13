@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AnalysisResults.aspx" />
     <Content Include="App.aspx" />
     <Content Include="Contacts.aspx" />
     <Content Include="css\bootstrap-theme.css" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisResults.aspx.cs">
+      <DependentUpon>AnalysisResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnalysisResults.aspx.designer.cs">
+      <DependentUpon>AnalysisResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="App.aspx.cs">
       <DependentUpon>App.aspx</DependentUpon>

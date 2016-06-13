@@ -16,7 +16,44 @@
 
 .pager {
 	position: absolute;
-	bottom: 60px;
+	bottom: 30px;
 	width: 830px;
 	height: 60px;
+}
+
+.row .btn {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+/*#OutputFromStanford {
+	position: relative
+}*/
+
+textarea {
+        resize: none;
+    }
+
+.btn-group > input {
+    margin-right:20px;
+	margin-bottom:10px;
+    border-radius:10px !important;
+	white-space: normal !important;
+}
+
+.btn-group-vertical {
+
+}
+
+img {
+    height: auto;
+    max-width: 640px;
+    -moz-transition: all 1s;
+    /*-ms-transition: all 1s;*/
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+img.expanded {
+    max-width: 2000px;
 }

@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h4>О приложении:</h4>
-    [Вставить сюда немного текста]
+    Статья в процессе разработки.
 
     <br />
 

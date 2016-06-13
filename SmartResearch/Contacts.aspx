@@ -12,8 +12,19 @@
 
     <strong>Евгений Сердюк</strong>
     <ul>
-        <li>Тел. [Оставь тут свой номер]</li>
-        <li>email: [И мейл]</li>
+        <li>Тел. (063) 476-91-67</li>
+        <li>email: zheka2797@gmail.com</li>
     </ul>
+
+    <br />
+    <strong>Обратная связь</strong>
+    <br />
+
+    <%--Message to: <asp:TextBox ID="txtTo" CssClass="form-control" runat="server" Width="300px" /><br>--%>
+    Отправитель: <asp:TextBox ID="txtFrom" CssClass="form-control" runat="server" Width="300px" /><br>
+    Тема: <asp:TextBox ID="txtSubject" CssClass="form-control" runat="server" Width="300px" /><br>
+    Тело Сообщения:<br>
+    <asp:TextBox ID="txtBody" CssClass="form-control" runat="server" Height="171px" TextMode="MultiLine"  Width="300px" /><br>
+    <asp:Button ID="SendMail" runat="server" Text="Отправить" CssClass="btn btn-default" OnClick="SendMail_Click" />
 
 </asp:Content>

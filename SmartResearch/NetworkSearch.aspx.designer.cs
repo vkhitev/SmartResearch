@@ -10,24 +10,15 @@
 namespace SmartResearch {
     
     
-    public partial class AppMaster {
+    public partial class NetworkSearch {
         
         /// <summary>
-        /// AppHeader элемент управления.
+        /// SqlDataSource1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AppHeader;
-        
-        /// <summary>
-        /// AppPlaceholder элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AppPlaceholder;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

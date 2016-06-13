@@ -141,11 +141,12 @@ namespace SmartResearch.KnowledgeBase
 
         public static void CreateConnection(string core_name)
         {
-            SqlConnectionStringBuilder conect_build = new SqlConnectionStringBuilder();
-            conect_build.InitialCatalog = core_name;
-            conect_build.DataSource = Environment.UserDomainName;
-            conect_build.IntegratedSecurity = true;
-            connection_string = conect_build.ConnectionString;
+            //SqlConnectionStringBuilder conect_build = new SqlConnectionStringBuilder();
+            //conect_build.InitialCatalog = core_name;
+            //conect_build.DataSource = Environment.UserDomainName;
+            //conect_build.IntegratedSecurity = true;
+            //connection_string = conect_build.ConnectionString;
+            connection_string = core_name; // new
         }
 
         private static bool Connect()

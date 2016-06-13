@@ -10,24 +10,24 @@
 namespace SmartResearch {
     
     
-    public partial class AppMaster {
+    public partial class ShowImagePage {
         
         /// <summary>
-        /// AppHeader элемент управления.
+        /// Label1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AppHeader;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// AppPlaceholder элемент управления.
+        /// Image1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder AppPlaceholder;
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }

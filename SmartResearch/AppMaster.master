@@ -5,31 +5,12 @@
     <!-- Custom styles for breadcrump template -->
     <link href="css/breadcrumb.css" rel="stylesheet"/>
 
+    <asp:ContentPlaceHolder ID="AppHeader" runat="server">
+    </asp:ContentPlaceHolder>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<asp:SiteMapPath 
-        ID="AppMap"
-        runat="server"
-        PathSeparator=" / " 
-        ParentLevelsDisplayed="1" 
-        PathDirection="RootToCurrent" 
-        RenderCurrentNodeAsLink="false" 
-        ShowToolTips="true"
-        CssClass="breadcrumb">
-        <NodeTemplate>
-            <li>
-                <asp:HyperLink
-                    id="lnkPage"
-                    Text='<%# Eval("Title") %>'
-                    NavigateUrl='<%# Eval("Url") %>'
-                    ToolTip='<%# Eval("Description") %>'
-                    Runat="server"
-                    
-                 />
-            </li>
-        </NodeTemplate>
-    </asp:SiteMapPath>--%>
 
     <asp:ContentPlaceHolder ID="AppPlaceholder" runat="server">
     </asp:ContentPlaceHolder>
