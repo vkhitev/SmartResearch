@@ -18,8 +18,8 @@
             <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" CssClass="table table-bordered" DataKeyNames="ID">
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
-                    <asp:BoundField DataField="Expresion" HeaderText="Выражение" SortExpression="Expresion" />
-                    <asp:BoundField DataField="Description" HeaderText="Описание" SortExpression="Description" />
+                    <asp:BoundField DataField="Expresion" HeaderText="Expresion" SortExpression="Expresion" />
+                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                 </Columns>
             </asp:GridView>
 

@@ -40,8 +40,8 @@ namespace SmartResearch
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string message = Application["msg"] as string;
             //string message = Request.QueryString["msg"];
+            string message = Session["msg"] as string;
             if (message == null)
             {
                 Response.Redirect("/App.aspx");

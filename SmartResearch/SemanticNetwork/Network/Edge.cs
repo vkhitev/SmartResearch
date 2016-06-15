@@ -36,12 +36,14 @@ namespace SmartResearch.SemanticNetwork.Network
             {
                 case "is a": DataType = EdgeType.Is; break;
                 case "has": DataType = EdgeType.Has; break;
-                default: {
-                        if (name.Substring(0, 4) == "has ")
-                            DataType = EdgeType.Has;
-                        else DataType = EdgeType.Other;
-                        break;
-                    }
+                default:
+                    DataType = EdgeType.Has; break;
+                //default: {
+                //        if (name.Substring(0, 4) == "has ")
+                //            DataType = EdgeType.Has;
+                //        else DataType = EdgeType.Other;
+                //        break;
+                //    }
             }
             Value = "";
         }

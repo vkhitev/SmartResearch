@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SmartResearchReport.Site" %>
+
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Отчёт к проекту</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="MainForm" runat="server">
+    <asp:Menu ID="NavigationMenu" runat="server"
+        EnableViewState="False"
+        StaticDisplayLevels="2"
+        StaticSelectedStyle-CssClass="active"
+        DataSourceID="SiteMapDataSource" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px">
+        <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <DynamicMenuStyle BackColor="#F7F6F3" />
+        <DynamicSelectedStyle BackColor="#5D7B9D" />
+        <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+<StaticSelectedStyle CssClass="active" BackColor="#5D7B9D"></StaticSelectedStyle>
+    </asp:Menu>
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+
+    <div>
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            <rsweb:ReportViewer ID="ReportViewer1" runat="server">
+            </rsweb:ReportViewer>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

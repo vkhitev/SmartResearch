@@ -57,3 +57,7 @@ img {
 img.expanded {
     max-width: 2000px;
 }
+
+.upload_btn {
+	margin-bottom:10px !important;
+}

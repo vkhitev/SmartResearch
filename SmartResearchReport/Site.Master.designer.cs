@@ -7,63 +7,54 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace SmartResearch {
+namespace SmartResearchReport {
     
     
-    public partial class App {
+    public partial class Site {
         
         /// <summary>
-        /// FileUpload элемент управления.
+        /// head элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// ButtonUpload элемент управления.
+        /// MainForm элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonUpload;
+        protected global::System.Web.UI.HtmlControls.HtmlForm MainForm;
         
         /// <summary>
-        /// LabelUpload элемент управления.
+        /// NavigationMenu элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelUpload;
+        protected global::System.Web.UI.WebControls.Menu NavigationMenu;
         
         /// <summary>
-        /// TextBox1 элемент управления.
+        /// SiteMapDataSource элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource;
         
         /// <summary>
-        /// ButtonNextStep элемент управления.
+        /// BodyContent элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonNextStep;
-        
-        /// <summary>
-        /// EmptyLabel элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder EmptyLabel;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyContent;
     }
 }
