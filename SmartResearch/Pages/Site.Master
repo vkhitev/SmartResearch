@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="SmartResearch.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>SmartResearch</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Bootstrap -->
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <%--<link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />--%>
+
+    <!-- Custom styles for sticky footer -->
+    <link href="/Content/sticky-footer.css" rel="stylesheet" />
+
+    <!-- Custom styles for jumbotron template -->
+    <link href="/Content/jumbotron-narrow.css" rel="stylesheet" />
+
+    <script src="/Scripts/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+
+      <form id="form1" runat="server">  
+
+        <!-- Меню -->
+        <div class="header clearfix">
+            <nav>
+                <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="False"
+                    StaticDisplayLevels="2"
+                    StaticSelectedStyle-CssClass="active"
+                    DataSourceID="SiteMapDataSource1">
+                </asp:Menu>
+
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+            </nav>
+            <h3 class="text-muted">Smart Research</h3>
+          </div>
+
+          <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <p>&copy; 2016 Хитёв Владислав, Сердюк Евгений.</p>
+    </footer>
+
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--%>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script src="/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+ 
+    <script type="text/javascript">
+        $('#NavigationMenu ul li a.selected').parent().addClass('active').removeClass('selected');
+        $('#NavigationMenu').removeAttr('style').find('ul').addClass('nav nav-pills pull-right');
+    </script>
+    
+    </body>
+</html>

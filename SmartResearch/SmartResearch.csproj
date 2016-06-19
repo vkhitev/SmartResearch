@@ -44,6 +44,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Parser">
+      <HintPath>..\Parser\bin\Debug\Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="SemanticNetwork">
+      <HintPath>..\SemanticNetwork\bin\Debug\SemanticNetwork.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -63,120 +69,100 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="AnalysisResults.aspx" />
-    <Content Include="App.aspx" />
-    <Content Include="Contacts.aspx" />
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\breadcrumb.css" />
-    <Content Include="css\jumbotron-narrow.css" />
-    <Content Include="css\sticky-footer.css" />
-    <Content Include="Documentation.aspx" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-2.2.4.min.js" />
-    <Content Include="js\npm.js" />
-    <Content Include="NetworkSearch.aspx" />
-    <Content Include="ShowImagePage.aspx" />
+    <Content Include="App_Data\KnowledgeBase.mdf" />
+    <Content Include="Pages\About.aspx" />
+    <Content Include="Pages\AnalysisResults.aspx" />
+    <Content Include="Pages\App.aspx" />
+    <Content Include="Pages\Contacts.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\breadcrumb.css" />
+    <Content Include="Content\jumbotron-narrow.css" />
+    <Content Include="Content\sticky-footer.css" />
+    <Content Include="Pages\Documentation.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Default.aspx" />
+    <Content Include="Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
+    <Compile Include="Pages\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
+    <Compile Include="Pages\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnalysisResults.aspx.cs">
+    <Compile Include="Pages\AnalysisResults.aspx.cs">
       <DependentUpon>AnalysisResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AnalysisResults.aspx.designer.cs">
+    <Compile Include="Pages\AnalysisResults.aspx.designer.cs">
       <DependentUpon>AnalysisResults.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App.aspx.cs">
+    <Compile Include="Pages\App.aspx.cs">
       <DependentUpon>App.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App.aspx.designer.cs">
+    <Compile Include="Pages\App.aspx.designer.cs">
       <DependentUpon>App.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AppMaster.master.cs">
+    <Compile Include="Pages\AppMaster.master.cs">
       <DependentUpon>AppMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AppMaster.master.designer.cs">
+    <Compile Include="Pages\AppMaster.master.designer.cs">
       <DependentUpon>AppMaster.master</DependentUpon>
     </Compile>
-    <Compile Include="Contacts.aspx.cs">
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Pages\Contacts.aspx.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contacts.aspx.designer.cs">
+    <Compile Include="Pages\Contacts.aspx.designer.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Documentation.aspx.cs">
+    <Compile Include="Pages\Documentation.aspx.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Documentation.aspx.designer.cs">
+    <Compile Include="Pages\Documentation.aspx.designer.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NetworkSearch.aspx.cs">
-      <DependentUpon>NetworkSearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NetworkSearch.aspx.designer.cs">
-      <DependentUpon>NetworkSearch.aspx</DependentUpon>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\DataBase.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Expressions\Axiom.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Expressions\ExpressionTree.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Expressions\Term.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Predicates\Arg.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Predicates\Function.cs" />
-    <Compile Include="SemanticNetwork\KnowledgeBase\Predicates\Predicate.cs" />
-    <Compile Include="SemanticNetwork\Network\Edge.cs" />
-    <Compile Include="SemanticNetwork\Network\Node.cs" />
-    <Compile Include="SemanticNetwork\Network\SNetwork.cs" />
-    <Compile Include="SemanticNetwork\Process.cs" />
-    <Compile Include="SemanticNetwork\Test.cs" />
-    <Compile Include="ShowImagePage.aspx.cs">
-      <DependentUpon>ShowImagePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ShowImagePage.aspx.designer.cs">
-      <DependentUpon>ShowImagePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Master.cs">
+    <Compile Include="Pages\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Master.designer.cs">
+    <Compile Include="Pages\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Site.Master" />
-    <Content Include="css\bootstrap-theme.css.map" />
-    <Content Include="css\bootstrap-theme.min.css.map" />
-    <Content Include="css\bootstrap.css.map" />
-    <Content Include="css\bootstrap.min.css.map" />
-    <Content Include="AppMaster.master" />
+    <Content Include="Pages\Site.Master" />
+    <Content Include="Pages\AppMaster.master" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

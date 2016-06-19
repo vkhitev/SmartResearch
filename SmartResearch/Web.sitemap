@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="/Default.aspx" title="Домашняя"  description="Главная странциа сайта">
-    <siteMapNode url="/App.aspx" title="Приложение"  description="Страница с приложением"/>
-    <siteMapNode url="/Documentation.aspx" title="Документация"  description="Документация"/>
-    <siteMapNode url="/About.aspx" title="О приложении"  description="Сведения о приложении"/>
-    <siteMapNode url="/Contacts.aspx" title="Контакты"  description="Контакты"/>
+  <siteMapNode url="" title="Домашняя"  description="Главная странциа сайта">
+    <siteMapNode url="application" title="Приложение"  description="Страница с приложением"/>
+    <siteMapNode url="documentation" title="Документация"  description="Документация"/>
+    <siteMapNode url="about" title="О приложении"  description="Сведения о приложении"/>
+    <siteMapNode url="contacts" title="Контакты"  description="Контакты"/>
   </siteMapNode>
 </siteMap>
