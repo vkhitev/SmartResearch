@@ -9,7 +9,8 @@ namespace SmartResearch
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.MapPageRoute(null, "", "~/Pages/Default.aspx");
-            routes.MapPageRoute(null, "application", "~/Pages/App.aspx");
+            routes.MapPageRoute(null, "home", "~/Pages/Default.aspx");
+			routes.MapPageRoute(null, "application", "~/Pages/App.aspx");
             routes.MapPageRoute(null, "about", "~/Pages/About.aspx");
             routes.MapPageRoute(null, "contacts", "~/Pages/Contacts.aspx");
             routes.MapPageRoute(null, "documentation", "~/Pages/Documentation.aspx");

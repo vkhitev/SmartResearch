@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 
-namespace SemanticNetwork.KnowledgeBase.Expressions
+namespace KnowledgeBase.Expressions
 {
 	/// <summary>
 	/// Аксиома, содержащая выражение в строковом виде и его описание.

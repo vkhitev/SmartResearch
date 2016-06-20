@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7CD36034-D806-4344-AEF1-231531BEA5CD}</ProjectGuid>
+    <ProjectGuid>{06A0E6B3-5290-4695-AE49-BADAF99D7E71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SemanticNetwork</RootNamespace>
-    <AssemblyName>SemanticNetwork</AssemblyName>
+    <RootNamespace>KnowledgeBase</RootNamespace>
+    <AssemblyName>KnowledgeBase</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,21 +30,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SemanticNetwork">
+      <HintPath>..\SemanticNetwork\bin\Debug\SemanticNetwork.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Network\Edge.cs" />
-    <Compile Include="Network\Node.cs" />
-    <Compile Include="Network\SNetwork.cs" />
-    <Compile Include="Process.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Expressions\Axiom.cs" />
+    <Compile Include="Expressions\ExpressionTree.cs" />
+    <Compile Include="Expressions\Term.cs" />
+    <Compile Include="Predicates\Arg.cs" />
+    <Compile Include="Predicates\Function.cs" />
+    <Compile Include="Predicates\Predicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

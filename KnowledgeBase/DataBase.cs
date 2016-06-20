@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 
-using SemanticNetwork.KnowledgeBase.Predicates;
+using KnowledgeBase.Predicates;
 using SemanticNetwork.Network;
-using SemanticNetwork.KnowledgeBase.Expressions;
+using KnowledgeBase.Expressions;
 
-namespace SemanticNetwork.KnowledgeBase
+namespace KnowledgeBase
 {
 	/// <summary>
 	/// Класс для управления базой данных, содержащей базу знаний

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticNetwork", "SemanticNetwork\SemanticNetwork.csproj", "{7CD36034-D806-4344-AEF1-231531BEA5CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeBase", "KnowledgeBase\KnowledgeBase.csproj", "{06A0E6B3-5290-4695-AE49-BADAF99D7E71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7CD36034-D806-4344-AEF1-231531BEA5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD36034-D806-4344-AEF1-231531BEA5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CD36034-D806-4344-AEF1-231531BEA5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A0E6B3-5290-4695-AE49-BADAF99D7E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A0E6B3-5290-4695-AE49-BADAF99D7E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A0E6B3-5290-4695-AE49-BADAF99D7E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A0E6B3-5290-4695-AE49-BADAF99D7E71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SemanticNetwork.KnowledgeBase.Predicates
+namespace KnowledgeBase.Predicates
 {
 	/// <summary>
 	/// Тип аргумента предиката

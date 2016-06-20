@@ -28,6 +28,11 @@
             <asp:Button ID="ButtonNextStep" runat="server" OnClick="ButtonNextStep_Click" Text="Продолжить" CssClass="btn btn-default"/>
             <asp:PlaceHolder runat="server" ID="EmptyLabel"></asp:PlaceHolder>
         </div>
+		<div class="example-buttons">
+			<asp:Button ID="Example1" runat="server" Text="Пример 1" CssClass="btn btn-success" OnClick="Example1_Click" /> <br />
+			<asp:Button ID="Example2" runat="server" Text="Пример 2" CssClass="btn btn-success" OnClick="Example2_Click" /> <br />
+			<asp:Button ID="Example3" runat="server" Text="Пример 3" CssClass="btn btn-success" OnClick="Example3_Click" />
+		</div>
     </div>
     
 </asp:Content>

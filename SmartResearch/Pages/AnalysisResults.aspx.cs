@@ -1,5 +1,6 @@
 ﻿using SemanticNetwork;
 using SemanticNetwork.Network;
+using KnowledgeBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,20 @@ namespace SmartResearch
         public static List<Process> processes = new List<Process>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            SNetwork net = new SNetwork(processes);
+			SNetwork net = new SNetwork(processes);
 
-			string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["KnowledgeBaseConnectionString"].ConnectionString;
-			SemanticNetwork.KnowledgeBase.DataBase.CreateConnection(connectionString);
-			SemanticNetwork.KnowledgeBase.DataBase.DataFromSemanticNetwork(net);
-			SemanticNetwork.KnowledgeBase.DataBase.WriteToDataBase();
+			string connectionString = System.Configuration.ConfigurationManager
+				.ConnectionStrings["KnowledgeBaseConnectionString"].ConnectionString;
+			try
+			{
+				KnowledgeBase.DataBase.CreateConnection(connectionString);
+				KnowledgeBase.DataBase.DataFromSemanticNetwork(net);
+				KnowledgeBase.DataBase.WriteToDataBase();
+			}
+			catch
+			{
+				Response.Redirect("application?db=failed");
+			}
 		}
 
         protected void ButtonShowGraph_Click(object sender, EventArgs e)
@@ -28,10 +37,10 @@ namespace SmartResearch
             snet.SaveToPng(Server.MapPath("graph.png"));
 
             HyperLink link = new HyperLink();
-            link.NavigateUrl = "graph.png";
+            link.NavigateUrl = "/graph.png";
 
             Image imgControl = new Image();
-            imgControl.ImageUrl = "graph.png";
+            imgControl.ImageUrl = "/graph.png";
             imgControl.BorderStyle = BorderStyle.Groove;
             imgControl.ID = "Graph";
             imgControl.Visible = true;

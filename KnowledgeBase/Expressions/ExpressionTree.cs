@@ -1,8 +1,8 @@
-﻿using SemanticNetwork.KnowledgeBase.Predicates;
+﻿using KnowledgeBase.Predicates;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SemanticNetwork.KnowledgeBase.Expressions
+namespace KnowledgeBase.Expressions
 {
 	/// <summary>
 	/// Типы допустимых логических операций.

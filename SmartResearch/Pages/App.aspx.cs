@@ -18,17 +18,17 @@ namespace SmartResearch
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Clear();
+			Session.Clear();
 
-			DirectoryInfo di = new DirectoryInfo(Server.MapPath("~/Uploads"));
-
-			foreach (FileInfo file in di.GetFiles())
+			string db = Request.QueryString["db"];
+			if (db != null && db == "failed")
 			{
-				file.Delete();
-			}
-			foreach (DirectoryInfo dir in di.GetDirectories())
-			{
-				dir.Delete(true);
+				Label l = new Label();
+				l.Text = "Извините, мы не можем создать базу знаний по введённому тексту.";
+				l.ForeColor = System.Drawing.Color.Red;
+				l.Style.Add("display", "block");
+				EmptyLabel.Controls.Add(l);
+				ButtonNextStep.Style.Add("margin-bottom", "0");
 			}
 		}
 
@@ -40,7 +40,6 @@ namespace SmartResearch
 				l.Text = "Заполните поле ввода!";
 				l.ForeColor = System.Drawing.Color.Red;
 				l.Style.Add("display", "block");
-				//EmptyLabel.Controls.Add(new LiteralControl("<br />"));
 				EmptyLabel.Controls.Add(l);
 				ButtonNextStep.Style.Add("margin-bottom", "0");
 				return;
@@ -104,9 +103,11 @@ namespace SmartResearch
                     }
                     else
                     {
-                        FileUpload.SaveAs(Server.MapPath(@"~/Uploads/" + FileUpload.FileName));
-                        _uploadedFilePath = Server.MapPath(@"~/Uploads/" + FileUpload.FileName);
-                        LabelUpload.Text = "Файл загружен";
+                        FileUpload.SaveAs(Server.MapPath(@"~/" + FileUpload.FileName));
+                        _uploadedFilePath = Server.MapPath(@"~/" + FileUpload.FileName);
+						//FileUpload.SaveAs(Server.MapPath(@"~/Uploads/" + FileUpload.FileName));
+						//_uploadedFilePath = Server.MapPath(@"~/Uploads/" + FileUpload.FileName);
+						LabelUpload.Text = "Файл загружен";
                         LabelUpload.ForeColor = System.Drawing.Color.Green;
                         string text;
                         using (var streamReader = new StreamReader(_uploadedFilePath, Encoding.UTF8))
@@ -139,5 +140,30 @@ namespace SmartResearch
                 TextBox.Text = text;
             }
         }
-    }
+
+		protected void Example1_Click(object sender, EventArgs e)
+		{
+			TextBox.Text = "Every animal has brain and live life. " +
+						   "Cat is an animal, it has tail and claws. " +
+						   "Also cat has color fur. " +
+						   "Cat hunts mouse. " +
+						   "Mouse is an animal too. " +
+						   "It has small tail. " +
+						   "Mouse eat wheat and cheese.";
+		}
+
+		protected void Example2_Click(object sender, EventArgs e)
+		{
+			TextBox.Text = "\"Domino\" is the best pizzeria with delicious pizza. " +
+						   "Carbonara is a pizza. " +
+						   "It has delicious taste. " +
+						   "It has bacon, ham, onion, mozzarella and mushrooms.";
+		}
+
+		protected void Example3_Click(object sender, EventArgs e)
+		{
+			TextBox.Text = "Complex_number is a set of all numbers. " +
+						   "It has Rational_numbers, Irrational_numbers, Integers and natural_numbers.";
+		}
+	}
 }

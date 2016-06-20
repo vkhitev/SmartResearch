@@ -1,4 +1,4 @@
-﻿using SemanticNetwork.KnowledgeBase.Predicates;
+﻿using KnowledgeBase.Predicates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace SemanticNetwork.KnowledgeBase.Expressions
+namespace KnowledgeBase.Expressions
 {
 	/// <summary>
 	/// Логическое выражение
@@ -201,9 +201,9 @@ namespace SemanticNetwork.KnowledgeBase.Expressions
         {
             Parse(expresion);
             _expresion = GetArgShablon(expresion);
-            _logic_tree = new ExpressionTree(ReplacePredicatesWithIndexes(expresion), Predicates);
+			_logic_tree = new ExpressionTree(ReplacePredicatesWithIndexes(expresion), Predicates);
 
-        }
+		}
 
 		/// <summary>
 		/// Получить несформированный шаблон

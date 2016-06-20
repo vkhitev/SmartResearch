@@ -59,5 +59,16 @@ img.expanded {
 }
 
 .upload_btn {
-	margin-bottom:10px !important;
+	margin-bottom: 10px !important;
+}
+
+.example-buttons {
+	float: right;
+	display: inline;
+	margin-right: -150px;
+	margin-top: -400px;
+}
+
+.example-buttons > * {
+	display: inline;
 }
