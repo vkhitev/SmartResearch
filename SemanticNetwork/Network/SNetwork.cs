@@ -116,8 +116,8 @@ namespace SemanticNetwork.Network
 		/// <param name="path">Путь к файлу</param>
         public void SaveToPng(string path)
         {
-            Dictionary<Node, PointF> nodes = new Dictionary<Node, PointF>(); ///< словник з координатами вершин
-            Dictionary<Edge, PointF> edges = new Dictionary<Edge, PointF>(); ///< словник з координатами середин ребер
+            Dictionary<Node, PointF> nodes = new Dictionary<Node, PointF>(); // Координаты вершин
+            Dictionary<Edge, PointF> edges = new Dictionary<Edge, PointF>(); // Координаты середин рёбер
             using (Bitmap b = new Bitmap(1920, 1080))
             {
                 using (Graphics g = Graphics.FromImage(b))

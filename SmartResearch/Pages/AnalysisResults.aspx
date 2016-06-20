@@ -7,8 +7,8 @@
     <div class="container">
         <div class="btn-group">
             <asp:Button ID="ButtonShowGraph" runat="server" Text="Просмотреть граф семантической сети" CssClass="btn btn-primary" OnClick="ButtonShowGraph_Click"/>
-            <asp:Button ID="ButtonFindDefinition" runat="server" Text="Найти определение слова" CssClass="btn btn-primary" OnClick="ButtonFindDefinition_Click"/>
-            <asp:Button ID="ButtonChangeDependencies" runat="server" Text="Исправить зависимости" CssClass="btn btn-primary" OnClick="ButtonChangeDependencies_Click"/>
+            <asp:Button ID="ButtonFindDefinition" runat="server" Text="Найти определение слова" CssClass="btn btn-primary disabled" OnClick="ButtonFindDefinition_Click"/>
+            <asp:Button ID="ButtonChangeDependencies" runat="server" Text="Исправить зависимости" CssClass="btn btn-primary disabled" OnClick="ButtonChangeDependencies_Click"/>
 
             <div>
                 <asp:PlaceHolder ID="ResultsPlaceholder" runat="server">
